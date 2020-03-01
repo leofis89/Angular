@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="jumbotron mt-5 py-4">
+		<div class="row">
+			<!-- DIVIDIR EM 2 COL COM 6 DE GRID CADA -->
+			<div class="col-sm-6">
+			<!-- COMPONENTE PROGRESSO -->
+				<app-progresso [progresso]="progresso"></app-progresso>
+			</div>
+			<div class="col-sm-6 d-flex justify-content-end">
+				<!-- Class tentativas -->
+				<app-tentativas [tentativas]="tentativas"></app-tentativas>
+			</div>
+			<div class="row px-3">
+				<div class="col">
+					<h5>{{texto}}</h5>
+					<p> {{frases[rodada].fraseEng}}</p>
+					<!-- <p>{{resposta}}</p>  ==> two-way data-binding -->
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--FORMULÁRIO -->
+
+		<div class="form-group">
+			<!-- EVENTO (input)="atualizaResposta()" ==> para fazer o EVENT BINDING COM 
+            A FUNÇÃO DO PAINEL.COMPONENT.TS-->
+			<textarea 
+			class="form-control" 
+			rows="3" 
+			(input)="atualizaResposta($event)"
+			[value]="resposta"  
+			>  <!--Property Bind  no [value] = "resposta"-->
+			</textarea>
+		</div>
+
+
+
+		<!-- Sempre colocar class=row e class=col, para usar FLEX-BOX-->
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-end">
+					<button type="button" class=" btn btn-primary" (click)="verificarResposta()">Verificar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
