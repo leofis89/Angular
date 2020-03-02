@@ -13,7 +13,7 @@ import { Frase } from "../shared/frase.model";
 export const FRASES: Frase[] = [
   { fraseEng: 'I am hungry' , frasePt:'Estou com fome'},
   { fraseEng: 'How are you?' , frasePt:'Como vai voce?'},
-  { fraseEng: 'I Kill you' , frasePt:'Eu vou te matar'},
-  { fraseEng: 'Son of a bitch' , frasePt:'filho da puta'}
+  { fraseEng: 'Help me' , frasePt:'Ajude me'},
+  { fraseEng: 'Son of a bitch' , frasePt:'Filho da puta'}
 ];
 
